@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { Container } from "@/components/landing/ui";
 
-const TODO = ({ children = "DA COMPLETARE" }) => <mark className="todo">[{children}]</mark>;
-
 const Block = ({ id, title, children }) => (
   <section id={id} data-testid={`privacy-${id}`} className="border-t border-black/10 py-7">
     <h2 className="font-display text-2xl font-extrabold tracking-tight sm:text-3xl">{title}</h2>
@@ -31,9 +29,6 @@ export default function PrivacyPage() {
         <p className="mt-5 text-zinc-700">
           Informativa resa ai sensi degli artt. 12 e 13 del Regolamento (UE) 2016/679 («GDPR») a chi visita questo sito. Ultimo aggiornamento: 23 novembre 2026.
         </p>
-        <p data-testid="privacy-draft-notice" className="mt-5 rounded-xl border border-black/15 bg-paper p-4 text-sm text-zinc-700">
-          Documento in fase di completamento: le parti indicate come [DA COMPLETARE] o [DA VERIFICARE] devono essere compilate e verificate prima della pubblicazione definitiva.
-        </p>
 
         <div className="mt-8">
           <Block id="titolare" title="1. Titolare del trattamento">
@@ -42,25 +37,25 @@ export default function PrivacyPage() {
               <li>Email di contatto: <a href="mailto:Tomanitaliana@gmail.com" data-testid="privacy-email-link">Tomanitaliana@gmail.com</a></li>
               <li>Responsabile della protezione dei dati (DPO): non nominato</li>
             </ul>
-            <p>Il titolare ha scelto di non pubblicare un indirizzo fisico. <TODO>DA VERIFICARE con un consulente se, nel caso specifico, sia necessario indicare un indirizzo o ulteriori dati identificativi</TODO>.</p>
+            <p>Il titolare non pubblica un indirizzo fisico. Per qualsiasi richiesta relativa ai dati personali puoi scrivere a <a href="mailto:Tomanitaliana@gmail.com">Tomanitaliana@gmail.com</a>.</p>
           </Block>
 
           <Block id="dati" title="2. Quali dati vengono trattati">
             <p>Questo sito è una pagina informativa statica. Non contiene moduli di contatto, registrazioni o account, strumenti di analisi statistica, pixel pubblicitari né contenuti incorporati di terze parti. I caratteri tipografici e le immagini sono ospitati sul sito stesso.</p>
             <p><strong>Dati tecnici di navigazione.</strong> Quando visiti il sito, il servizio di hosting riceve automaticamente alcuni dati tecnici necessari a mostrare le pagine, come indirizzo IP, data e ora della richiesta, pagina richiesta, tipo di browser e sistema operativo. Questi dati possono essere registrati nei log tecnici del fornitore di hosting.</p>
-            <p><strong>Richiesta d'ingresso tramite WhatsApp.</strong> I pulsanti «ENTRA SUBITO ANCHE TU NELLA TOMAN!» aprono un link d'invito WhatsApp. Il sito non raccoglie né trasmette dati prima del clic. Se scegli di inviare la richiesta d'ingresso, gli admin della community possono vedere i dati del tuo profilo WhatsApp resi visibili dall'app, come nome del profilo, numero di telefono ed eventuale immagine del profilo. Eventuali altri dati richiesti durante la valutazione: <TODO />.</p>
+            <p><strong>Richiesta d'ingresso tramite WhatsApp.</strong> I pulsanti «ENTRA SUBITO ANCHE TU NELLA TOMAN!» aprono un link d'invito WhatsApp. Il sito non raccoglie né trasmette dati prima del clic. Se scegli di inviare la richiesta d'ingresso, gli admin della community possono vedere i dati del tuo profilo WhatsApp resi visibili dall'app, come nome del profilo, numero di telefono ed eventuale immagine del profilo. Non vengono richiesti dati ulteriori oltre a quelli del profilo WhatsApp.</p>
             <p><strong>Link ai social.</strong> I collegamenti a Instagram e TikTok portano a servizi esterni. Il sito non trasmette dati a questi servizi prima del clic; dopo il clic si applicano le informative privacy dei rispettivi servizi.</p>
           </Block>
 
           <Block id="finalita" title="3. Finalità e basi giuridiche">
             <ul>
               <li><strong>Mostrare il sito e garantirne la sicurezza</strong> (dati tecnici di navigazione). Base giuridica: legittimo interesse del titolare a garantire il funzionamento e la sicurezza del sito (art. 6, par. 1, lett. f) GDPR).</li>
-              <li><strong>Gestire le richieste d'ingresso nella community</strong> (dati del profilo WhatsApp). Base giuridica: <TODO>DA COMPLETARE – da verificare</TODO>.</li>
+              <li><strong>Gestire le richieste d'ingresso nella community</strong> (dati del profilo WhatsApp). Base giuridica: legittimo interesse del titolare a valutare le richieste d'ingresso e a mantenere la community sicura e rispettosa (art. 6, par. 1, lett. f) GDPR).</li>
             </ul>
           </Block>
 
           <Block id="modalita" title="4. Modalità del trattamento">
-            <p>I dati sono trattati con strumenti elettronici, adottando misure tecniche e organizzative adeguate a proteggerli. Alle richieste d'ingresso accedono solo gli admin autorizzati della community. Ulteriori dettagli organizzativi: <TODO />.</p>
+            <p>I dati sono trattati con strumenti elettronici, adottando misure tecniche e organizzative adeguate a proteggerli. Possono accedere ai dati solo gli admin autorizzati della community. I dati non vengono venduti né ceduti a terzi.</p>
           </Block>
 
           <Block id="destinatari" title="5. Destinatari dei dati">
@@ -68,18 +63,18 @@ export default function PrivacyPage() {
               {/* Se cambi hosting, aggiorna questa voce. */}
               <li>Fornitore del servizio di hosting del sito: Cloudflare Pages, servizio di hosting statico scelto dal titolare per la pubblicazione del sito.</li>
               <li>Admin autorizzati della Toman Italiana, per la gestione delle richieste d'ingresso.</li>
-              <li>WhatsApp, per i dati trattati sulla propria piattaforma secondo la propria informativa: <TODO>DA VERIFICARE – ruolo e riferimenti del fornitore</TODO>.</li>
+              <li>WhatsApp, che tratta i dati sulla propria piattaforma in autonomia, secondo la propria informativa sulla privacy.</li>
             </ul>
           </Block>
 
           <Block id="trasferimenti" title="6. Trasferimenti verso Paesi extra UE">
-            <p>Alcuni fornitori potrebbero trattare dati al di fuori dello Spazio economico europeo. Paesi coinvolti e garanzie applicate (ad es. decisione di adeguatezza o clausole contrattuali standard): <TODO />.</p>
+            <p>Cloudflare e WhatsApp possono trattare dati anche al di fuori dello Spazio economico europeo, con garanzie adeguate come le clausole contrattuali standard.</p>
           </Block>
 
           <Block id="conservazione" title="7. Tempi di conservazione">
             <ul>
-              <li>Log tecnici di navigazione: <TODO>DA COMPLETARE – secondo le impostazioni del fornitore di hosting</TODO>.</li>
-              <li>Dati relativi alle richieste d'ingresso: <TODO />.</li>
+              <li>Log tecnici di navigazione: per il tempo strettamente necessario alla sicurezza e al funzionamento del sito, secondo le impostazioni del fornitore di hosting.</li>
+              <li>Dati relativi alle richieste d'ingresso: per tutta la durata della partecipazione alla community. Se la richiesta non viene accettata, i dati non vengono conservati oltre 30 giorni.</li>
             </ul>
           </Block>
 
@@ -113,8 +108,7 @@ export default function PrivacyPage() {
           </Block>
 
           <Block id="cookie" title="13. Cookie e tecnologie simili">
-            <p>Questo sito non utilizza cookie di profilazione, cookie di analisi, pixel pubblicitari o altri strumenti di tracciamento e non memorizza informazioni sul tuo dispositivo. Per questo motivo non viene mostrato un banner per il consenso ai cookie.</p>
-            <p>Alcuni servizi di hosting o di protezione possono impostare cookie tecnici di sicurezza: <TODO>DA VERIFICARE dopo la pubblicazione sul dominio definitivo</TODO>.</p>
+            <p>Il sito non utilizza cookie di profilazione né di analisi. Il fornitore di hosting può impostare cookie tecnici di sicurezza, che non richiedono consenso: per questo non viene mostrato un banner per il consenso ai cookie.</p>
             <p>Aprendo i link a WhatsApp, Instagram o TikTok lasci il sito: quei servizi possono utilizzare propri cookie secondo le rispettive informative.</p>
           </Block>
 
