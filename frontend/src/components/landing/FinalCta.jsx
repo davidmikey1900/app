@@ -15,7 +15,7 @@ export const FinalCta = () => (
           Se anche tu desideri vivere la tua passione per anime, manga e cosplay, conoscere nuove persone e costruire amicizie autentiche in un ambiente sano e organizzato, la Toman Italiana è il posto giusto per te!
         </p>
       </Reveal>
-      <div className="mt-9"><CtaButton id="finale" note align="center" /></div>
+      <div className="mt-9"><CtaButton id="finale" note age align="center" /></div>
     </Container>
   </section>
 );

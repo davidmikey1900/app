@@ -18,6 +18,7 @@ Scelte utente: nessuno spazio foto; titoli decisi, moderni, compatti, ispirazion
 - 2026-11-23 (revision 5): privacy titolare = David Muccitelli, Tomanitaliana@gmail.com (no physical address by choice, flagged DA VERIFICARE); compact footer: 3 social chips grouped (founder chip "Profilo del fondatore: @david_muccitelli"), bottom bar with copyright + legal links; less space before footer.
 - 2026-11-23 (revision 6): privacy filled: last update 23/11/2026, DPO non nominato, hosting Cloudflare Pages, legal basis logs art. 6.1.f. 9 placeholders remain.
 - 2026-11-23 (revision 7): all privacy placeholders filled with owner-approved texts; draft notice removed; README note on missing legal review.
+- 2026-11-23 (revision 8): age note (AGE_NOTE in site.js) under CTAs hero, ambiente-sano, finale; hero parallax uses window scrollY (fixes framer-motion console warning).
 - 2026-11-23 (revision 3, copy edits authorized by user): Raduni 07 condensed (no redundancy, future goal kept); rules list made more concise (same 6 items); safe title → "Una community dove il rispetto viene prima di tutto."; online card 4 title → "Hai bisogno di aiuto con il tuo cosplay?"; tighter mobile spacing, compact creator cards, scroll-padding for sticky header.
 
 ## Backlog

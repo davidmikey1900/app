@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Container, CtaButton } from "./ui";
 
@@ -6,14 +5,13 @@ const LINES = ["Ami gli anime,", "i manga", "e il cosplay?"];
 const EASE = [0.16, 1, 0.3, 1];
 
 const StackWords = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -60]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -120]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -180]);
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 800], [0, -60]);
+  const y2 = useTransform(scrollY, [0, 800], [0, -120]);
+  const y3 = useTransform(scrollY, [0, 800], [0, -180]);
   const ys = [y1, y2, y3];
   return (
-    <div ref={ref} aria-hidden="true" className="hero-stack pointer-events-none relative hidden select-none lg:block">
+    <div aria-hidden="true" className="hero-stack pointer-events-none relative hidden select-none lg:block">
       {["ANIME", "MANGA", "COSPLAY"].map((w, i) => (
         <motion.span key={w} style={{ y: ys[i] }} className={`block font-display ${i === 1 ? "text-ink" : "outline-text"}`}>
           {w}
@@ -52,7 +50,7 @@ export const Hero = () => (
           Vorresti conoscere nuove persone, vivere esperienze indimenticabili o realizzare i tuoi progetti, ma non sai da dove cominciare?
         </p>
         <div className="mt-9">
-          <CtaButton id="hero" note />
+          <CtaButton id="hero" note age />
         </div>
       </div>
       <StackWords />

@@ -43,7 +43,7 @@ export const SafeSpace = () => (
           Il nostro obiettivo è costruire una community in cui ogni persona possa sentirsi accolta, rispettata e tutelata, lontano da comportamenti tossici, discriminazioni e situazioni di disagio.
         </p>
       </Reveal>
-      <div className="mt-8"><CtaButton id="ambiente-sano" /></div>
+      <div className="mt-8"><CtaButton id="ambiente-sano" age /></div>
     </Container>
   </section>
 );

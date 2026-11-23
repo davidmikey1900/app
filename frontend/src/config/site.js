@@ -3,6 +3,7 @@ export const WHATSAPP_URL = "https://chat.whatsapp.com/Bi3jTiiDIZOCJrA6ymFWdZ?mo
 
 export const CTA_LABEL = "ENTRA SUBITO ANCHE TU NELLA TOMAN!";
 export const CTA_NOTE = "Un admin prenderà in carico la tua richiesta il prima possibile.";
+export const AGE_NOTE = "Puoi entrare nella Toman Italiana se compi almeno 14 anni entro il 31 dicembre dell'anno in corso.";
 
 export const SOCIALS = [
   { id: "instagram", name: "Instagram", handle: "@toman_italiana", url: "https://www.instagram.com/toman_italiana/" },

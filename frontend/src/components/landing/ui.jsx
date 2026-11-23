@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
-import { WHATSAPP_URL, CTA_LABEL, CTA_NOTE } from "@/config/site";
+import { WHATSAPP_URL, CTA_LABEL, CTA_NOTE, AGE_NOTE } from "@/config/site";
 
 export const Container = ({ className = "", children }) => (
   <div className={`mx-auto w-full max-w-6xl px-5 sm:px-8 ${className}`}>{children}</div>
@@ -25,7 +25,7 @@ export const Slash = ({ className = "" }) => (
   <span aria-hidden="true" className={`slash ${className}`} />
 );
 
-export const CtaButton = ({ id, note = false, align = "left", dark = false }) => (
+export const CtaButton = ({ id, note = false, age = false, align = "left", dark = false }) => (
   <div className={`flex flex-col gap-3 ${align === "center" ? "items-center text-center" : "items-start"}`}>
     <a
       href={WHATSAPP_URL}
@@ -41,6 +41,11 @@ export const CtaButton = ({ id, note = false, align = "left", dark = false }) =>
     {note && (
       <p data-testid={`cta-note-${id}`} className={`text-sm ${dark ? "text-zinc-300" : "text-zinc-600"}`}>
         {CTA_NOTE}
+      </p>
+    )}
+    {age && (
+      <p data-testid={`cta-age-${id}`} className="max-w-md text-[0.8125rem] leading-snug text-zinc-600">
+        {AGE_NOTE}
       </p>
     )}
   </div>
