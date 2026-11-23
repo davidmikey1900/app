@@ -1,0 +1,20 @@
+# The site is a Create React App (via CRACO) project living in `frontend/`.
+[build]
+  base = "frontend"
+  # Install dependencies explicitly so the build also works when the build
+  # runner doesn't do it first (e.g. CLI-driven builds/deploys).
+  command = "yarn install --non-interactive && yarn build"
+  # Relative to the base directory -> frontend/build
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # No lockfile is committed, and npm cannot resolve this project's peer
+  # dependencies (it also ignores the Yarn `resolutions` field), so force Yarn.
+  NETLIFY_USE_YARN = "true"
+
+# Client-side routing (React Router): serve index.html for routes like /privacy.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
