@@ -4,7 +4,7 @@ import { Container } from "./ui";
 export const Header = () => (
   <header data-testid="site-header" className="sticky top-0 z-40 border-b border-black/10 bg-white">
     <Container className="flex h-16 items-center sm:h-20">
-      <a href="#top" data-testid="header-logo-link" className="flex items-center gap-3 rounded focus-visible:outline-offset-4">
+      <a href="/#top" data-testid="header-logo-link" className="flex items-center gap-3 rounded focus-visible:outline-offset-4">
         <img
           src={LOGO.small}
           alt={LOGO.alt}

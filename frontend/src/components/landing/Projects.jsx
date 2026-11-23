@@ -43,7 +43,7 @@ const Project9 = () => (
     </div>
     <Creators />
     <div className="mt-6 max-w-3xl space-y-3 text-base leading-relaxed text-zinc-700 sm:text-lg">
-      <p>Oppure abbia qualsiasi altro progetto legato al mondo anime, manga e cosplay.</p>
+      <p>Oppure che tu abbia qualsiasi altro progetto legato al mondo anime, manga e cosplay.</p>
       <p className="font-semibold text-ink">Nella Toman Italiana puoi trovare una community e una struttura organizzativa con cui sviluppare le tue idee, ottenere visibilità e creare nuove collaborazioni!</p>
     </div>
   </Reveal>

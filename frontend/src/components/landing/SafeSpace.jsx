@@ -26,21 +26,21 @@ export const SafeSpace = () => (
         </div>
       </Reveal>
 
-      <Reveal className="mt-10 rounded-2xl border border-black/10 bg-white p-6 sm:p-10">
+      <Reveal className="mt-10 rounded-2xl border border-black/10 bg-white p-5 sm:p-8">
         <h3 className="font-display text-2xl font-extrabold tracking-tight sm:text-3xl">Non inviare la tua richiesta d'ingresso se:</h3>
-        <ul data-testid="rules-list" className="mt-4 divide-y divide-black/10">
+        <ol data-testid="rules-list" className="mt-5 grid gap-x-10 md:grid-cols-2">
           {RULES.map((r, i) => (
-            <li key={r} data-testid={`rule-${i + 1}`} className="flex gap-4 py-4 sm:gap-6 sm:py-5">
-              <span aria-hidden="true" className="rule-dot mt-1 shrink-0">{i + 1}</span>
-              <p className="leading-relaxed text-zinc-700">{r}</p>
+            <li key={r} data-testid={`rule-${i + 1}`} className="flex gap-4 border-t border-black/10 py-4">
+              <span aria-hidden="true" className="rule-dot shrink-0">{i + 1}</span>
+              <p className="text-zinc-700">{r}</p>
             </li>
           ))}
-        </ul>
+        </ol>
       </Reveal>
 
       <Reveal className="mt-8 max-w-3xl">
         <p className="text-lg font-semibold leading-relaxed text-ink">
-          Il nostro obiettivo è costruire una community in cui ogni persona possa sentirsi accolta, rispettata e tutelata, senza dover affrontare comportamenti tossici, discriminazioni o situazioni di disagio.
+          Il nostro obiettivo è costruire una community in cui ogni persona possa sentirsi accolta, rispettata e tutelata, lontano da comportamenti tossici, discriminazioni e situazioni di disagio.
         </p>
       </Reveal>
       <div className="mt-8"><CtaButton id="ambiente-sano" /></div>

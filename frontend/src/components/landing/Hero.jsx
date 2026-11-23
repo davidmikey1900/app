@@ -13,7 +13,7 @@ const StackWords = () => {
   const y3 = useTransform(scrollYProgress, [0, 1], [0, -180]);
   const ys = [y1, y2, y3];
   return (
-    <div ref={ref} aria-hidden="true" className="hero-stack pointer-events-none hidden select-none lg:block">
+    <div ref={ref} aria-hidden="true" className="hero-stack pointer-events-none relative hidden select-none lg:block">
       {["ANIME", "MANGA", "COSPLAY"].map((w, i) => (
         <motion.span key={w} style={{ y: ys[i] }} className={`block font-display ${i === 1 ? "text-ink" : "outline-text"}`}>
           {w}
@@ -27,7 +27,7 @@ export const Hero = () => (
   <section id="top" data-testid="hero-section" className="hero-bg relative overflow-hidden">
     <Container className="relative grid gap-10 pb-14 pt-12 sm:pt-16 lg:grid-cols-[1.35fr_1fr] lg:pb-24 lg:pt-24">
       <div>
-        <h1 data-testid="hero-title" className="font-display text-[3.4rem] font-extrabold leading-[0.92] tracking-tight sm:text-7xl lg:text-[6.25rem]">
+        <h1 data-testid="hero-title" className="font-display text-[clamp(2.6rem,13vw,3.4rem)] font-extrabold leading-[0.92] tracking-tight sm:text-7xl lg:text-[6.25rem]">
           {LINES.map((l, i) => (
             <span key={l} className="block overflow-hidden pb-[0.06em]">
               <motion.span

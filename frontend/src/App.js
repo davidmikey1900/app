@@ -1,4 +1,5 @@
 import { MotionConfig } from "framer-motion";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "@/App.css";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
@@ -13,26 +14,36 @@ import { Projects } from "@/components/landing/Projects";
 import { SafeSpace } from "@/components/landing/SafeSpace";
 import { FinalCta } from "@/components/landing/FinalCta";
 import { Footer } from "@/components/landing/Footer";
+import PrivacyPage from "@/pages/PrivacyPage";
+
+const Landing = () => (
+  <main id="contenuto">
+    <Hero />
+    <Marquee />
+    <Problems />
+    <Amplification />
+    <Solution />
+    <Online />
+    <Live />
+    <FreeTime />
+    <Projects />
+    <SafeSpace />
+    <FinalCta />
+  </main>
+);
 
 export default function App() {
   return (
-    <MotionConfig reducedMotion="user">
-      <a href="#contenuto" className="skip-link">Vai al contenuto</a>
-      <Header />
-      <main id="contenuto">
-        <Hero />
-        <Marquee />
-        <Problems />
-        <Amplification />
-        <Solution />
-        <Online />
-        <Live />
-        <FreeTime />
-        <Projects />
-        <SafeSpace />
-        <FinalCta />
-      </main>
-      <Footer />
-    </MotionConfig>
+    <BrowserRouter>
+      <MotionConfig reducedMotion="user">
+        <a href="#contenuto" className="skip-link">Vai al contenuto</a>
+        <Header />
+        <Routes>
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="*" element={<Landing />} />
+        </Routes>
+        <Footer />
+      </MotionConfig>
+    </BrowserRouter>
   );
 }

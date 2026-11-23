@@ -67,3 +67,9 @@ Tutti i 10 pulsanti "ENTRA SUBITO ANCHE TU NELLA TOMAN!" usano automaticamente q
 - Con caricamento manuale: esegui di nuovo `yarn build` e ricarica la cartella `frontend/build` creando un nuovo deployment.
 
 Il sito non dipende in alcun modo da Emergent: puoi smettere di usarlo senza conseguenze.
+
+## 9. Prima della pubblicazione definitiva
+- **Informativa sulla privacy** (`frontend/src/pages/PrivacyPage.jsx`, indirizzo `/privacy`): completa tutte le parti evidenziate `[DA COMPLETARE]` / `[DA VERIFICARE]` e fai verificare il testo.
+- **Dominio definitivo:** in `frontend/public/index.html` togli i commenti dal tag `canonical` e da `og:url` sostituendo `DOMINIO`. Per anteprime social più affidabili, scrivi anche l'indirizzo completo in `og:image` e `twitter:image` (es. `https://DOMINIO/og-image.jpg`).
+- **Pagine interne:** Cloudflare Pages serve automaticamente `index.html` anche per `/privacy` (non aggiungere un file `404.html`). Su Netlify aggiungi in `frontend/public` un file `_redirects` con la riga `/* /index.html 200`.
+- **Cookie:** dopo la pubblicazione controlla dagli strumenti del browser che l'hosting non imposti cookie; se ne imposta, aggiorna la sezione 13 dell'informativa.

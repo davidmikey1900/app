@@ -67,7 +67,11 @@ export const Footer = () => (
         <p className="font-display text-xl font-extrabold tracking-tight">Toman Italiana</p>
       </div>
       <Socials />
-      <p data-testid="footer-copyright" className="text-sm text-zinc-600">© {new Date().getFullYear()} Toman Italiana</p>
+      <nav aria-label="Informazioni legali" data-testid="footer-legal" className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-sm">
+        <a href="/privacy" data-testid="footer-privacy-link" className="footer-legal-link">Informativa sulla privacy</a>
+        <a href="/privacy#cookie" data-testid="footer-cookie-link" className="footer-legal-link">Cookie</a>
+      </nav>
+      <p data-testid="footer-copyright" className="text-sm text-zinc-600">© {new Date().getFullYear()} Toman Italiana. Tutti i diritti riservati.</p>
     </Container>
   </footer>
 );
