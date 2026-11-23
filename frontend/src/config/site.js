@@ -10,7 +10,7 @@ export const SOCIALS = [
 ];
 
 export const FOUNDER = {
-  label: "Personal Brand del fondatore della Toman Italiana",
+  label: "Profilo del fondatore",
   name: "Instagram",
   handle: "@david_muccitelli",
   url: "https://www.instagram.com/david_muccitelli/",

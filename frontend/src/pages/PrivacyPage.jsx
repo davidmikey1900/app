@@ -38,11 +38,11 @@ export default function PrivacyPage() {
         <div className="mt-8">
           <Block id="titolare" title="1. Titolare del trattamento">
             <ul>
-              <li>Nome o denominazione: <TODO /></li>
-              <li>Indirizzo: <TODO /></li>
-              <li>Email di contatto per la privacy: <TODO /></li>
-              <li>Responsabile della protezione dei dati (DPO), se nominato: <TODO /></li>
+              <li>Nome: David Muccitelli</li>
+              <li>Email di contatto: <a href="mailto:Tomanitaliana@gmail.com" data-testid="privacy-email-link">Tomanitaliana@gmail.com</a></li>
+              <li>Responsabile della protezione dei dati (DPO): <TODO>DA VERIFICARE – indicare se nominato</TODO></li>
             </ul>
+            <p>Il titolare ha scelto di non pubblicare un indirizzo fisico. <TODO>DA VERIFICARE con un consulente se, nel caso specifico, sia necessario indicare un indirizzo o ulteriori dati identificativi</TODO>.</p>
           </Block>
 
           <Block id="dati" title="2. Quali dati vengono trattati">
@@ -96,7 +96,7 @@ export default function PrivacyPage() {
           </Block>
 
           <Block id="esercizio" title="9. Come esercitare i tuoi diritti">
-            <p>Puoi inviare la tua richiesta a: <TODO>DA COMPLETARE – email o altro recapito</TODO>. Riceverai una risposta senza ingiustificato ritardo e, di norma, entro un mese dal ricevimento della richiesta (art. 12, par. 3 GDPR).</p>
+            <p>Puoi inviare la tua richiesta a: <a href="mailto:Tomanitaliana@gmail.com">Tomanitaliana@gmail.com</a>. Riceverai una risposta senza ingiustificato ritardo e, di norma, entro un mese dal ricevimento della richiesta (art. 12, par. 3 GDPR).</p>
           </Block>
 
           <Block id="reclamo" title="10. Reclamo all'autorità di controllo">

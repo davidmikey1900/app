@@ -1,7 +1,7 @@
 import { Container, CtaButton, Reveal } from "./ui";
 
 export const FinalCta = () => (
-  <section data-testid="final-section" className="relative border-t border-black/10 py-12 sm:py-20">
+  <section data-testid="final-section" className="relative border-t border-black/10 pb-10 pt-12 sm:pb-16 sm:pt-20">
     <Container className="relative text-center">
       <Reveal>
         <span aria-hidden="true" className="slash mx-auto block" />

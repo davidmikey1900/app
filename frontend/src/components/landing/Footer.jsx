@@ -17,61 +17,50 @@ const TikTokIcon = () => (
 
 const ICONS = { instagram: InstagramIcon, tiktok: TikTokIcon };
 
+const SocialLink = ({ id, url, label, handle, icon: Icon, caption }) => (
+  <li>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-testid={`footer-social-${id}`}
+      aria-label={`${label} ${handle} (si apre in una nuova scheda)`}
+      className="social-link"
+    >
+      <Icon />
+      {caption && <span className="text-zinc-600">{caption}</span>}
+      <span className="font-semibold">{handle}</span>
+    </a>
+  </li>
+);
+
 const Socials = () => (
   <div data-testid="footer-socials" className="flex flex-col items-center gap-3">
     <p className="font-display text-lg font-extrabold tracking-tight">Seguici sui nostri social!</p>
-    <ul className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
-      {SOCIALS.map((s) => {
-        const Icon = ICONS[s.id];
-        return (
-          <li key={s.id}>
-            <a
-              href={s.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid={`footer-social-${s.id}`}
-              aria-label={`${s.name} ${s.handle} (si apre in una nuova scheda)`}
-              className="social-link"
-            >
-              <Icon />
-              <span className="font-semibold">{s.name}</span>
-              <span className="text-zinc-600">{s.handle}</span>
-            </a>
-          </li>
-        );
-      })}
+    <ul className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+      {SOCIALS.map((s) => (
+        <SocialLink key={s.id} id={s.id} url={s.url} label={`${s.name} ufficiale Toman Italiana`} handle={s.handle} icon={ICONS[s.id]} />
+      ))}
+      <SocialLink id="founder" url={FOUNDER.url} label={`${FOUNDER.label}, ${FOUNDER.name}`} handle={FOUNDER.handle} icon={InstagramIcon} caption={`${FOUNDER.label}:`} />
     </ul>
-    <div data-testid="footer-founder" className="mt-2 flex flex-col items-center gap-2 border-t border-black/10 pt-4">
-      <p className="text-sm font-semibold text-zinc-700">{FOUNDER.label}</p>
-      <a
-        href={FOUNDER.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        data-testid="footer-social-founder"
-        aria-label={`${FOUNDER.label}: ${FOUNDER.name} ${FOUNDER.handle} (si apre in una nuova scheda)`}
-        className="social-link"
-      >
-        <InstagramIcon />
-        <span className="font-semibold">{FOUNDER.name}:</span>
-        <span className="text-zinc-600">{FOUNDER.handle}</span>
-      </a>
-    </div>
   </div>
 );
 
 export const Footer = () => (
-  <footer data-testid="site-footer" className="border-t border-black/10 bg-white py-8 sm:py-10">
+  <footer data-testid="site-footer" className="border-t border-black/10 bg-white pb-6 pt-7 sm:pt-9">
     <Container className="flex flex-col items-center gap-5 text-center">
       <div className="flex items-center gap-3">
-        <img src={LOGO.small} alt={LOGO.alt} width="64" height="64" loading="lazy" className="h-14 w-14 sm:h-16 sm:w-16" data-testid="footer-logo" />
+        <img src={LOGO.small} alt={LOGO.alt} width="56" height="56" loading="lazy" className="h-12 w-12 sm:h-14 sm:w-14" data-testid="footer-logo" />
         <p className="font-display text-xl font-extrabold tracking-tight">Toman Italiana</p>
       </div>
       <Socials />
-      <nav aria-label="Informazioni legali" data-testid="footer-legal" className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-sm">
-        <a href="/privacy" data-testid="footer-privacy-link" className="footer-legal-link">Informativa sulla privacy</a>
-        <a href="/privacy#cookie" data-testid="footer-cookie-link" className="footer-legal-link">Cookie</a>
-      </nav>
-      <p data-testid="footer-copyright" className="text-sm text-zinc-600">© {new Date().getFullYear()} Toman Italiana. Tutti i diritti riservati.</p>
+      <div className="flex w-full flex-col items-center gap-1 border-t border-black/10 pt-4 text-sm sm:flex-row sm:justify-between">
+        <p data-testid="footer-copyright" className="text-zinc-600">© {new Date().getFullYear()} Toman Italiana. Tutti i diritti riservati.</p>
+        <nav aria-label="Informazioni legali" data-testid="footer-legal" className="flex items-center gap-x-4">
+          <a href="/privacy" data-testid="footer-privacy-link" className="footer-legal-link">Informativa sulla privacy</a>
+          <a href="/privacy#cookie" data-testid="footer-cookie-link" className="footer-legal-link">Cookie</a>
+        </nav>
+      </div>
     </Container>
   </footer>
 );
