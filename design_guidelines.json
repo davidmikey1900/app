@@ -1,0 +1,467 @@
+{
+  "project_name": "Toman Italiana - Landing Page",
+  "app_type": "landing_page",
+  "audience": "Italian anime, manga, and cosplay fans (youth and young adults) looking for a curated, respectful, and active WhatsApp community to make genuine friends, attend comic fairs together, collaborate as creators, and share hobbies.",
+  "context_type": "marketing_landing_page",
+  "theme": "light_mode_dominant",
+  "design_philosophy": {
+    "archetype": "Swiss High-Contrast meets Japanese Modern Editorial (Manga-Inspired Precision)",
+    "core_aesthetic": "White dominant canvas, stark deep ink black typography, controlled crimson red accents (#DC2626 / #E11D48) taken from the Tokyo Manji symbol/seal. Extremely clean, orderly, modern, mature yet energetic. Not childish, not cartoonish, no meme clutter.",
+    "emotional_goal": "Belonging, trust, seriousness, excitement, and community pride. Feeling like entering an exclusive yet welcoming circle where your passion is celebrated safely.",
+    "strict_constraints": [
+      "White dominant background across the page",
+      "Black for all titles, headings, and high-readability body copy",
+      "Red accent used strictly for buttons (~10 CTA buttons), active badges, thin dividers, bullet accents, and small highlights. NO big red section backgrounds.",
+      "Mobile is absolute priority - single column flow, tap-friendly buttons (min 48px height), ample line height, zero horizontal overflow.",
+      "No animations, popups, or intrusive effects that disturb scrolling. Gentle micro-interactions on hover and taps only.",
+      "NO stock photos, NO copyrighted anime screenshots, NO photo placeholders. Visual identity is driven strictly by: official Toman emblem/logo (SVG/vector format), crisp borders, typography hierarchy, status badges, and refined iconography (Lucide)."
+    ]
+  },
+  "typography": {
+    "font_family_headings": "'Cabinet Grotesk', 'Syne', -apple-system, sans-serif",
+    "font_family_body": "'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif",
+    "google_fonts_embed": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&family=Cabinet+Grotesk:wght@800;900&display=swap",
+    "hierarchy": {
+      "hero_h1": "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.12] text-zinc-950",
+      "section_h2": "text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-950 uppercase",
+      "subsection_h3": "text-xl sm:text-2xl font-bold tracking-tight text-zinc-900",
+      "card_title_h4": "text-lg sm:text-xl font-bold text-zinc-900",
+      "body_lead": "text-base sm:text-lg text-zinc-700 leading-relaxed font-normal",
+      "body_regular": "text-sm sm:text-base text-zinc-600 leading-relaxed font-normal",
+      "eyebrow_label": "text-xs font-bold uppercase tracking-[0.2em] text-red-600 inline-block mb-2",
+      "note_text": "text-xs sm:text-sm text-zinc-500 italic mt-2.5 text-center"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background_primary": "#FFFFFF",
+      "background_secondary": "#F9FAFB",
+      "background_surface": "#F4F4F5",
+      "text_primary": "#09090B",
+      "text_secondary": "#52525B",
+      "text_muted": "#71717A",
+      "accent_red": "#DC2626",
+      "accent_red_hover": "#B91C1C",
+      "accent_red_light": "#FEF2F2",
+      "border_subtle": "#E4E4E7",
+      "border_card": "#E2E8F0",
+      "whatsapp_green_subtle": "#25D366"
+    },
+    "cta_buttons": {
+      "bg_color": "bg-red-600",
+      "hover_bg": "hover:bg-red-700 active:bg-red-800",
+      "text_color": "text-white",
+      "border_radius": "rounded-lg sm:rounded-xl",
+      "padding": "px-6 py-4 sm:px-8 sm:py-4.5",
+      "font": "font-bold text-base tracking-wide uppercase",
+      "shadow": "shadow-sm hover:shadow-md transition-all duration-150 ease-out",
+      "label": "ENTRA SUBITO ANCHE TU NELLA TOMAN!"
+    }
+  },
+  "logo_and_brand_assets": {
+    "logo_component_path": "src/components/brand/TomanLogo.js",
+    "description": "Crisp geometric Tokyo Manji gang inspired official emblem: circular Japanese seal with clean radial calligraphy motif in obsidian black and Japanese cinnabar red (#DC2626), rendered in pure sharp SVG vector so it looks razor-sharp on Retina/4K displays and scales flawlessly without blur.",
+    "placements": [
+      {
+        "location": "Header (top-left)",
+        "size": "w-9 h-9 sm:w-10 sm:h-10",
+        "description": "Accompanying the text 'TOMAN ITALIANA' with an active verified community badge ('500+ Membri')"
+      },
+      {
+        "location": "Big Centered Reveal (Section 4 - Transition between Lost Opportunities & Solution)",
+        "size": "w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56",
+        "description": "Massive official centerpiece framed in an elegant double-ringed seal with subtle red accent ring and Japanese kanji watermark, introducing the solution presentation."
+      },
+      {
+        "location": "Footer (centered or bottom brand column)",
+        "size": "w-12 h-12 sm:w-14 sm:h-14",
+        "description": "Official crest marking the conclusion with copyright and community charter."
+      }
+    ]
+  },
+  "structure_and_copy_map": [
+    {
+      "section_id": "hero",
+      "order": 1,
+      "eyebrow": "COMMUNITY WHATSAPP ITALIANA",
+      "heading": "Ami gli anime, i manga e il cosplay?",
+      "subtitle": "La prima vera community italiana su WhatsApp nata per unire fan, cosplayer e creator. Uno spazio sicuro, attivo ogni giorno, dove trovare amici autentici con cui condividere la tua passione e andare alle fiere del fumetto insieme.",
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "hero-whatsapp-cta-button"
+      },
+      "stats_preview": [
+        {"value": "500+", "label": "Membri attivi in tutta Italia"},
+        {"value": "20+", "label": "Admin e moderatori dedicati"},
+        {"value": "100%", "label": "Spazio controllato e rispettoso"}
+      ]
+    },
+    {
+      "section_id": "problems",
+      "order": 2,
+      "eyebrow": "LA REALTÀ DI OGGI",
+      "heading": "I 5 Problemi di Chi Ama Anime e Manga in Italia",
+      "lead": "Se ami questa passione, probabilmente ti sei già trovato ad affrontare almeno una di queste situazioni frustranti:",
+      "items": [
+        {
+          "number": "01",
+          "title": "Nessuno tra gli amici storici condivide la tua passione",
+          "description": "A scuola, al lavoro o in famiglia sei spesso l'unico che legge manga, guarda anime stagionali o sogna di fare cosplay. Finisci per tenere per te tutto l'entusiasmo."
+        },
+        {
+          "number": "02",
+          "title": "Andare alle fiere del fumetto da solo",
+          "description": "Lucca Comics, Romics, Comicon, Milano Games Week: vorresti andarci in compagnia, ma non sai con chi fare il viaggio, dividere l'alloggio o girare tra gli stand."
+        },
+        {
+          "number": "03",
+          "title": "Gruppi social tossici, caotici o pieni di troll",
+          "description": "I classici gruppi Facebook o server aperti diventano presto ingestibili: insulti, spoiler gratuiti, gatekeeping e nessuno che moderi davvero le conversazioni."
+        },
+        {
+          "number": "04",
+          "title": "Difficoltà a trovare compagni di cosplay e team",
+          "description": "Hai un progetto cosplay ambizioso o vorresti formare un gruppo a tema, ma non hai contatti sul territorio e ti ritrovi a dover rinunciare o ad arrangiarti."
+        },
+        {
+          "number": "05",
+          "title": "Zero spazio di crescita e visibilità per i creator",
+          "description": "Disegni, realizzi cosplay, canti o crei contenuti, ma i tuoi lavori finiscono sommersi dagli algoritmi senza un pubblico reale e appassionato che ti supporti."
+        }
+      ],
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "problems-whatsapp-cta-button"
+      }
+    },
+    {
+      "section_id": "amplification",
+      "order": 3,
+      "eyebrow": "L'IMPATTO NEL TEMPO",
+      "heading": "Cosa Succede Se Rimani Isolato nella Tua Passione",
+      "lead": "Il rischio reale non è solo annoiarsi: è perdere occasioni ed esperienze indimenticabili che non torneranno.",
+      "lost_opportunities": [
+        {
+          "title": "Fiere vissute a metà",
+          "desc": "Camminare per ore tra la folla senza poter condividere un'emozione, una foto insieme o una battuta sul manga del momento."
+        },
+        {
+          "title": "Progetti cosplay mai realizzati",
+          "desc": "Costumi rimasti nel cassetto perché fare un set fotografico o una sfilata da soli non è la stessa cosa."
+        },
+        {
+          "title": "Mancanza di nuove amicizie sincere",
+          "desc": "Rimanere intrappolati nella solita routine senza conoscere persone con cui parlare liberamente per ore di ciò che ami."
+        },
+        {
+          "title": "Perdita di motivazione e stimoli creativi",
+          "desc": "Senza confronto, feedback costruttivo e supporto reciproco, anche la passione più grande rischia di spegnersi."
+        }
+      ],
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "amplification-whatsapp-cta-button"
+      }
+    },
+    {
+      "section_id": "big_logo_reveal",
+      "order": 4,
+      "description": "Prominent, centered, high-contrast display of the official Toman Italiana logo emblem, acting as the dramatic turning point of the page narrative."
+    },
+    {
+      "section_id": "solution",
+      "order": 5,
+      "eyebrow": "LA SOLUZIONE CHE CERCAVI",
+      "heading": "Benvenuto in Toman Italiana: La Community Fatta da Fan per i Fan",
+      "subtitle": "Abbiamo creato Toman Italiana per risolvere una volta per tutte l'isolamento degli appassionati. Una grande famiglia organizzata, attiva giorno e notte, fondata sul rispetto, sull'aiuto reciproco e sulla voglia di vivere la passione dal vivo.",
+      "stats_grid": [
+        {
+          "number": "500+",
+          "label": "Membri Attivi",
+          "detail": "Appassionati da ogni regione d'Italia pronti ad accoglierti."
+        },
+        {
+          "number": "20+",
+          "label": "Admin e Moderatori",
+          "detail": "Un team presente che garantisce ordine, sicurezza e serenità."
+        },
+        {
+          "number": "100%",
+          "label": "WhatsApp Dedicato",
+          "detail": "Nessuna app complessa: chat diretta, comoda e immediata."
+        }
+      ],
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "solution-whatsapp-cta-button"
+      }
+    },
+    {
+      "section_id": "online_activities",
+      "order": 6,
+      "eyebrow": "VITA DIGITALE",
+      "heading": "Cosa Facciamo Online (Punti 1-4)",
+      "lead": "Ogni giorno la community pulsa di iniziative organizzate per non farti mai sentire solo:",
+      "items": [
+        {
+          "step": "1",
+          "title": "Discussioni giornaliere e hype sulle uscite",
+          "desc": "Commentiamo insieme i nuovi capitoli manga, gli episodi anime della settimana, le serie del momento e i grandi classici."
+        },
+        {
+          "step": "2",
+          "title": "Serate gaming, quiz e canali tematici",
+          "desc": "Sessioni di gioco online, trivia a squadre, sondaggi e spazi dedicati per condividere consigli di lettura e watchlist."
+        },
+        {
+          "step": "3",
+          "title": "Gruppi cosplay e scambio consigli tecnici",
+          "desc": "WIP, sartoria, prop making, parrucche e trucco: una chat dove chiedere e dare consigli pratici a cosplayer di ogni livello."
+        },
+        {
+          "step": "4",
+          "title": "Spazi creativi e condivisione talenti",
+          "desc": "Bacheche per mostrare disegni, illustrazioni, doppiaggi amatoriali, foto e ricevere critiche sincere e costruttive."
+        }
+      ],
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "online-activities-whatsapp-cta-button"
+      }
+    },
+    {
+      "section_id": "live_activities",
+      "order": 7,
+      "eyebrow": "DAL VIRTUALE AL REALE",
+      "heading": "Attività dal Vivo (Punti 5-7)",
+      "lead": "Non siamo solo una chat WhatsApp: il nostro obiettivo è trasformare i messaggi in abbracci, risate e ricordi indelebili dal vivo.",
+      "items": [
+        {
+          "step": "5",
+          "title": "Partecipazione di gruppo alle principali Fiere del Fumetto",
+          "badge": "In Programma & Fiere Attive",
+          "desc": "Lucca Comics, Romics, Comicon, Novegro e le fiere regionali: organizziamo punti di ritrovo, car sharing, alloggi condivisi e foto di gruppo."
+        },
+        {
+          "step": "6",
+          "title": "Uscite settimanali e ritrovi regionali",
+          "badge": "In Crescita nelle Città",
+          "desc": "Pomeriggi in fumetteria, cinema insieme per i film d'animazione, cene sushi, ramen o bubble tea organizzati per zone geografiche."
+        },
+        {
+          "step": "7",
+          "title": "Grandi Raduni Ufficiali Toman Italiana",
+          "badge": "Obiettivo Futuro",
+          "desc": "Eventi esclusivi riservati ai membri della community: giornate dedicate con contest, set fotografici, giochi dal vivo e gadget per celebrare la nostra fratellanza."
+        }
+      ],
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "live-activities-whatsapp-cta-button"
+      }
+    },
+    {
+      "section_id": "free_time",
+      "order": 8,
+      "eyebrow": "TEMPO LIBERO CONDIVISO",
+      "heading": "Punto 8: Il Tuo Spazio Quotidiano di Relax",
+      "description": "La vita di tutti i giorni può essere stressante tra studio, sessioni d'esame e lavoro. Toman Italiana è la tua oasi di decompressione: apri WhatsApp quando torni a casa e trovi sempre qualcuno pronto a scambiare una chiacchiera amichevole, ascoltarti e farti ridere.",
+      "highlights": [
+        "Nessuna pressione di presenza: partecipi quando e come vuoi",
+        "Meme, chiacchiere leggere e confronti sereni",
+        "Una cerchia di fiducia dove puoi essere te stesso al 100%"
+      ],
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "free-time-whatsapp-cta-button"
+      }
+    },
+    {
+      "section_id": "projects_and_creators",
+      "order": 9,
+      "eyebrow": "CREATIVITÀ & COLLABORAZIONE",
+      "heading": "Punto 9: Progetti e Collaborazioni per Creator",
+      "lead": "Se crei qualcosa legato alla cultura nerd e pop giapponese, in Toman trovi terreno fertile per collaborare con 8 categorie di talenti:",
+      "categories": [
+        {"id": 1, "title": "Cosplayer", "desc": "Gruppi a tema, coppie cosplay e supporto sul campo durante le fiere."},
+        {"id": 2, "title": "Disegnatori & Illustratori", "desc": "Scambio di tavole, fan art, consigli su software grafici e stili."},
+        {"id": 3, "title": "Fotografi & Videomaker", "desc": "Set fotografici in fiera, reel, video cosplay e shooting concordati."},
+        {"id": 4, "title": "Doppiatori & Voice Actor", "desc": "Fandub amatoriali, clip animate e recitazione vocale."},
+        {"id": 5, "title": "Scrittori & Fanfictioner", "desc": "Trame, sceneggiature, worldbuilding e storie originali."},
+        {"id": 6, "title": "Musicisti & Cantanti Anime", "desc": "Cover di opening/ending, j-pop, remix e progetti audio."},
+        {"id": 7, "title": "Crafter & Prop Maker", "desc": "Creazione di armi sceniche, armature, stampe 3D e accessori cosplay."},
+        {"id": 8, "title": "Content Creator & Streamer", "desc": "Recensioni, canali TikTok/YouTube, streaming congiunte e community play."}
+      ],
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "projects-whatsapp-cta-button"
+      }
+    },
+    {
+      "section_id": "visibility",
+      "order": 10,
+      "eyebrow": "CRESCITA E VALORIZZAZIONE",
+      "heading": "Punto 10: Visibilità Reale e Spazio per Farti Conoscere",
+      "lead": "Non lasciamo che i tuoi sforzi rimangano invisibili. La nostra community promuove attivamente il talento dei propri membri attraverso 5 canali chiari:",
+      "bullets": [
+        {
+          "tag": "Vetrina Creator",
+          "text": "Condivisione dei tuoi lavori migliori direttamente nelle bacheche e nei canali ufficiali della community."
+        },
+        {
+          "tag": "Supporto Social Reciproco",
+          "text": "Interazioni autentiche (like, commenti, repost) tra membri appassionati per dare slancio ai tuoi profili social."
+        },
+        {
+          "tag": "Spazio Fiera Condiviso",
+          "text": "Possibilità di partecipare in fiera insieme ad altri creator riconosciuti per aumentare la tua visibilità sul campo."
+        },
+        {
+          "tag": "Collaborazioni Incrociate",
+          "text": "Opportunità di unirti ad altri artisti per progetti congiunti di portata maggiore rispetto al lavoro da soli."
+        },
+        {
+          "tag": "Feedback Diretto e Competente",
+          "text": "Consigli da colleghi appassionati per migliorare tecnica, posing, editing video e resa scenica."
+        }
+      ],
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "visibility-whatsapp-cta-button"
+      }
+    },
+    {
+      "section_id": "safe_environment",
+      "order": 11,
+      "eyebrow": "SICUREZZA & RISPETTO",
+      "heading": "Un Ambiente Sicuro e Protetto: Il Nostro Regolamento",
+      "subtitle": "La Toman è una famiglia e protegge i propri membri. La presenza costante di oltre 20 admin assicura che il gruppo rimanga un luogo sano e accogliente. Per garantire questo standard, non sono ammessi:",
+      "prohibited_behaviors": [
+        {
+          "num": "1",
+          "title": "Mancanza di rispetto e insulti",
+          "desc": "Tolleranza zero per offese personali, discriminazioni, molestie o attacchi verso qualsiasi membro."
+        },
+        {
+          "num": "2",
+          "title": "Tossicità e Gatekeeping",
+          "desc": "Vietato sminuire i gusti altrui o decidere chi è un 'vero fan' e chi no. Ognuno vive la passione al proprio ritmo."
+        },
+        {
+          "num": "3",
+          "title": "Spoiler gratuiti e non segnalati",
+          "desc": "Rispettiamo chi è indietro con le serie: gli spoiler sono consentiti solo nelle aree dedicate e con apposito avviso."
+        },
+        {
+          "num": "4",
+          "title": "Contenuti NSFW, espliciti o inappropriati",
+          "desc": "Il gruppo mantiene un ambiente pulito e sicuro per tutti, inclusi membri più giovani o alle prime esperienze."
+        },
+        {
+          "num": "5",
+          "title": "Spam invasivo e autopromozione selvaggia",
+          "desc": "Nessuna invasione di link esterni non autorizzati, catene o messaggi promozionali indiscriminati."
+        },
+        {
+          "num": "6",
+          "title": "Molestie e messaggi privati indesiderati",
+          "desc": "I membri, in particolare le cosplayer e le ragazze della community, non devono essere contattate privatamente senza consenso."
+        }
+      ],
+      "tone_note": "Il regolamento deve trasmettere fermezza, serietà e protezione senza risultare aggressivo o militaresco.",
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "safe-environment-whatsapp-cta-button"
+      }
+    },
+    {
+      "section_id": "final_cta",
+      "order": 12,
+      "eyebrow": "FAI IL TUO INGRESSO",
+      "heading": "Non Restare a Guardare da Fuori. La Tua Nuova Famiglia Ti Aspetta.",
+      "subtitle": "Basta fiere vissute da solo. Basta chat noiose. Clicca sul pulsante qui sotto, entra nella sala d'attesa WhatsApp e presentati alla Toman.",
+      "cta": {
+        "text": "ENTRA SUBITO ANCHE TU NELLA TOMAN!",
+        "note": "Un admin prenderà in carico la tua richiesta il prima possibile.",
+        "testid": "final-whatsapp-cta-button"
+      },
+      "guarantee_badges": [
+        "Accesso Gratuito al 100%",
+        "Oltre 500 Fan Verificati",
+        "Team di 20+ Admin Attivi",
+        "Community Italiana Ufficiale"
+      ]
+    },
+    {
+      "section_id": "footer",
+      "order": 13,
+      "logo_display": "Official crest centered with brand name",
+      "description": "Toman Italiana - La Community Italiana di riferimento per appassionati di Anime, Manga e Cosplay.",
+      "disclaimer": "Community indipendente senza scopo di lucro fondata da fan per fan. Tutti i marchi e le opere citate appartengono ai rispettivi proprietari.",
+      "copyright": "© 2026 Toman Italiana. Tutti i diritti riservati."
+    }
+  ],
+  "components_layout_blueprint": {
+    "header": {
+      "style": "sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zinc-200 py-3 sm:py-4 px-4 sm:px-8",
+      "elements": [
+        "Brand Logo (TomanLogo SVG) + Title 'TOMAN ITALIANA'",
+        "Live Community pill badge '500+ Membri Attivi' with green status pulse indicator",
+        "Header Quick CTA button (red, compact): 'ENTRA ORA' (triggers WhatsApp join modal/link)"
+      ],
+      "testid": "main-header"
+    },
+    "whatsapp_interaction": {
+      "target_behavior": "Modal or direct link handler to WhatsApp verification/intake group with a friendly confirmation step informing the user that an admin will verify their request promptly.",
+      "modal_content": {
+        "title": "Richiesta di Accesso a Toman Italiana",
+        "body": "Stai per essere reindirizzato al gruppo di accoglienza WhatsApp ufficiale. Un admin esaminerà la tua richiesta nel più breve tempo possibile per garantire la sicurezza della community.",
+        "action_button": "Continua su WhatsApp",
+        "cancel_button": "Torna indietro"
+      }
+    }
+  },
+  "visual_enhancers": {
+    "geometric_elements": "Clean 1px architectural grid lines (#E4E4E7), Japanese mon-seal badges with 2px borders, numbered pill badges (e.g. '01', 'PUNTO 8'), and crisp dual-toned red and zinc indicator lines.",
+    "textures": "Pure high-key light layout. Subtle dot matrix grid pattern in selected hero and stats backgrounds for tactical manga editorial depth without visual noise.",
+    "border_radius": "Subtle modern radius (rounded-lg to rounded-xl, 8px-12px) as specified in user choices; no bubble/cartoon pill shapes."
+  },
+  "interactive_and_test_ids": {
+    "header": "main-header",
+    "header_cta": "header-whatsapp-cta-button",
+    "hero_cta": "hero-whatsapp-cta-button",
+    "problems_cta": "problems-whatsapp-cta-button",
+    "amplification_cta": "amplification-whatsapp-cta-button",
+    "solution_cta": "solution-whatsapp-cta-button",
+    "online_activities_cta": "online-activities-whatsapp-cta-button",
+    "live_activities_cta": "live-activities-whatsapp-cta-button",
+    "free_time_cta": "free-time-whatsapp-cta-button",
+    "projects_cta": "projects-whatsapp-cta-button",
+    "visibility_cta": "visibility-whatsapp-cta-button",
+    "safe_environment_cta": "safe-environment-whatsapp-cta-button",
+    "final_cta": "final-whatsapp-cta-button",
+    "whatsapp_modal": "whatsapp-access-modal",
+    "whatsapp_modal_confirm": "whatsapp-modal-confirm-button",
+    "whatsapp_modal_cancel": "whatsapp-modal-cancel-button"
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Maintain the exact copy structure and verbatim Italian phrasing specified in the user brief.",
+    "CRITICAL: Include approximately 10 red CTA buttons positioned across every key narrative milestone, always accompanied by the reassurance note: 'Un admin prenderà in carico la tua richiesta il prima possibile.'",
+    "CRITICAL: Implement the official Toman Italiana logo as a dedicated React component at src/components/brand/TomanLogo.js rendering a crisp, authentic vector emblem with cinnabar red (#DC2626) and obsidian black (#09090B). Use it in header, large reveal before solution, and footer.",
+    "CRITICAL: Mobile view is priority #1. Test responsiveness down to 360px viewport width. Ensure all buttons span full width or comfortably centered, typography wraps cleanly without hyphenation clipping.",
+    "CRITICAL: Do NOT add any stock photography, random anime drawings, or generic avatars. Rely exclusively on typography, geometric card containers, numbered badges, Lucide icons, and the Toman logo.",
+    "CRITICAL: Connect all ~10 CTA buttons to an elegant WhatsApp intake dialog or verified WhatsApp invite URL with toast feedback ('Richiesta inviata: verrai indirizzato a WhatsApp...').",
+    "CRITICAL: All files created must be pure .js / .jsx (React CRA standard in /app/frontend/src), NOT .tsx files.",
+    "CRITICAL: Ensure all interactive buttons, cards, and sections have their designated data-testid attributes for automated verification."
+  ]
+}

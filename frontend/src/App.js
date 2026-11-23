@@ -1,57 +1,38 @@
-import { useEffect } from "react";
+import { MotionConfig } from "framer-motion";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
+import { Header } from "@/components/landing/Header";
+import { Hero } from "@/components/landing/Hero";
+import { Marquee } from "@/components/landing/Marquee";
+import { Problems } from "@/components/landing/Problems";
+import { Amplification } from "@/components/landing/Amplification";
+import { Solution } from "@/components/landing/Solution";
+import { Online } from "@/components/landing/Online";
+import { Live } from "@/components/landing/Live";
+import { FreeTime } from "@/components/landing/FreeTime";
+import { Projects } from "@/components/landing/Projects";
+import { SafeSpace } from "@/components/landing/SafeSpace";
+import { FinalCta } from "@/components/landing/FinalCta";
+import { Footer } from "@/components/landing/Footer";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
+export default function App() {
   return (
-    // The marker attribute below lets the platform probe detect the stock splash — remove it with this page
-    <div data-emergent-splash>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <MotionConfig reducedMotion="user">
+      <a href="#contenuto" className="skip-link">Vai al contenuto</a>
+      <Header />
+      <main id="contenuto">
+        <Hero />
+        <Marquee />
+        <Problems />
+        <Amplification />
+        <Solution />
+        <Online />
+        <Live />
+        <FreeTime />
+        <Projects />
+        <SafeSpace />
+        <FinalCta />
+      </main>
+      <Footer />
+    </MotionConfig>
   );
 }
-
-export default App;
