@@ -9,6 +9,13 @@ export const SOCIALS = [
   { id: "tiktok", name: "TikTok", handle: "@toman_italiana", url: "https://www.tiktok.com/@toman_italiana" },
 ];
 
+export const FOUNDER = {
+  label: "Personal Brand del fondatore della Toman Italiana",
+  name: "Instagram",
+  handle: "@david_muccitelli",
+  url: "https://www.instagram.com/david_muccitelli/",
+};
+
 export const LOGO = {
   small: "/assets/logo-toman-italiana-256.webp",
   large: "/assets/logo-toman-italiana-800.webp",

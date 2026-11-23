@@ -1,4 +1,4 @@
-import { LOGO, SOCIALS } from "@/config/site";
+import { LOGO, SOCIALS, FOUNDER } from "@/config/site";
 import { Container } from "./ui";
 
 const InstagramIcon = () => (
@@ -41,6 +41,21 @@ const Socials = () => (
         );
       })}
     </ul>
+    <div data-testid="footer-founder" className="mt-2 flex flex-col items-center gap-2 border-t border-black/10 pt-4">
+      <p className="text-sm font-semibold text-zinc-700">{FOUNDER.label}</p>
+      <a
+        href={FOUNDER.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-testid="footer-social-founder"
+        aria-label={`${FOUNDER.label}: ${FOUNDER.name} ${FOUNDER.handle} (si apre in una nuova scheda)`}
+        className="social-link"
+      >
+        <InstagramIcon />
+        <span className="font-semibold">{FOUNDER.name}:</span>
+        <span className="text-zinc-600">{FOUNDER.handle}</span>
+      </a>
+    </div>
   </div>
 );
 
