@@ -29,7 +29,7 @@ export default function PrivacyPage() {
         <div className="mt-8"><span aria-hidden="true" className="slash" /></div>
         <h1 data-testid="privacy-title" className="mt-6 font-display text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-6xl">Informativa sulla privacy</h1>
         <p className="mt-5 text-zinc-700">
-          Informativa resa ai sensi degli artt. 12 e 13 del Regolamento (UE) 2016/679 («GDPR») a chi visita questo sito. Ultimo aggiornamento: <TODO />.
+          Informativa resa ai sensi degli artt. 12 e 13 del Regolamento (UE) 2016/679 («GDPR») a chi visita questo sito. Ultimo aggiornamento: 23 novembre 2026.
         </p>
         <p data-testid="privacy-draft-notice" className="mt-5 rounded-xl border border-black/15 bg-paper p-4 text-sm text-zinc-700">
           Documento in fase di completamento: le parti indicate come [DA COMPLETARE] o [DA VERIFICARE] devono essere compilate e verificate prima della pubblicazione definitiva.
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
             <ul>
               <li>Nome: David Muccitelli</li>
               <li>Email di contatto: <a href="mailto:Tomanitaliana@gmail.com" data-testid="privacy-email-link">Tomanitaliana@gmail.com</a></li>
-              <li>Responsabile della protezione dei dati (DPO): <TODO>DA VERIFICARE – indicare se nominato</TODO></li>
+              <li>Responsabile della protezione dei dati (DPO): non nominato</li>
             </ul>
             <p>Il titolare ha scelto di non pubblicare un indirizzo fisico. <TODO>DA VERIFICARE con un consulente se, nel caso specifico, sia necessario indicare un indirizzo o ulteriori dati identificativi</TODO>.</p>
           </Block>
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
 
           <Block id="finalita" title="3. Finalità e basi giuridiche">
             <ul>
-              <li><strong>Mostrare il sito e garantirne la sicurezza</strong> (dati tecnici di navigazione). Base giuridica: <TODO>DA COMPLETARE – ad es. legittimo interesse, art. 6, par. 1, lett. f) GDPR, da verificare</TODO>.</li>
+              <li><strong>Mostrare il sito e garantirne la sicurezza</strong> (dati tecnici di navigazione). Base giuridica: legittimo interesse del titolare a garantire il funzionamento e la sicurezza del sito (art. 6, par. 1, lett. f) GDPR).</li>
               <li><strong>Gestire le richieste d'ingresso nella community</strong> (dati del profilo WhatsApp). Base giuridica: <TODO>DA COMPLETARE – da verificare</TODO>.</li>
             </ul>
           </Block>
@@ -65,7 +65,8 @@ export default function PrivacyPage() {
 
           <Block id="destinatari" title="5. Destinatari dei dati">
             <ul>
-              <li>Fornitore del servizio di hosting del sito: <TODO>DA COMPLETARE – nome del fornitore e ruolo, ad es. responsabile del trattamento</TODO>.</li>
+              {/* Se cambi hosting, aggiorna questa voce. */}
+              <li>Fornitore del servizio di hosting del sito: Cloudflare Pages, servizio di hosting statico scelto dal titolare per la pubblicazione del sito.</li>
               <li>Admin autorizzati della Toman Italiana, per la gestione delle richieste d'ingresso.</li>
               <li>WhatsApp, per i dati trattati sulla propria piattaforma secondo la propria informativa: <TODO>DA VERIFICARE – ruolo e riferimenti del fornitore</TODO>.</li>
             </ul>
