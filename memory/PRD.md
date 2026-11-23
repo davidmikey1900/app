@@ -12,6 +12,7 @@ Scelte utente: nessuno spazio foto; titoli decisi, moderni, compatti, ispirazion
 
 ## Implemented (2026-11-23)
 - All copy sections in order, 10 CTA buttons, notes under hero and final CTA, logo x3, SEO title/description/OG, robots.txt, skip link, keyboard focus, reduced-motion support, README for export & Cloudflare Pages.
+- 2026-11-23 (revision 1): all sections white (no black blocks; Raduni card now white with black border), removed duplicated "1." numbering from titles (big outlined numbers kept), tighter vertical spacing, marquee phrases replaced (FAI NUOVE AMICIZIE / VIVI ESPERIENZE INDIMENTICABILI / VAI ALLE FIERE IN COMPAGNIA / REALIZZA I TUOI PROGETTI), compact footer with "Seguici sui nostri social!" Instagram + TikTok (config in site.js SOCIALS).
 
 ## Backlog
 - P1: OG image in PNG/JPG 1200x630 for better social previews; sitemap once the domain is known.

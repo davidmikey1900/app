@@ -1,13 +1,13 @@
 import { Container, Num, Reveal } from "./ui";
 
 export const FreeTime = () => (
-  <section data-testid="freetime-section" className="border-t border-black/10 bg-paper py-20 sm:py-28">
+  <section data-testid="freetime-section" className="border-t border-black/10 py-14 sm:py-20">
     <Container>
-      <Reveal className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+      <Reveal className="grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
         <div>
           <Num n={8} className="text-6xl sm:text-7xl" />
           <h2 data-testid="freetime-title" className="mt-3 font-display text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-5xl">
-            8. Hai poco tempo libero? Nessun problema!
+            Hai poco tempo libero? Nessun problema!
           </h2>
         </div>
         <div className="space-y-5 text-base leading-relaxed text-zinc-700 sm:text-lg lg:pt-12">

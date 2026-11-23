@@ -25,7 +25,7 @@ const StackWords = () => {
 
 export const Hero = () => (
   <section id="top" data-testid="hero-section" className="hero-bg relative overflow-hidden">
-    <Container className="relative grid gap-10 pb-20 pt-14 sm:pt-20 lg:grid-cols-[1.35fr_1fr] lg:pb-28 lg:pt-28">
+    <Container className="relative grid gap-10 pb-14 pt-12 sm:pt-16 lg:grid-cols-[1.35fr_1fr] lg:pb-24 lg:pt-24">
       <div>
         <h1 data-testid="hero-title" className="font-display text-[3.4rem] font-extrabold leading-[0.92] tracking-tight sm:text-7xl lg:text-[6.25rem]">
           {LINES.map((l, i) => (

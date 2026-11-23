@@ -20,7 +20,7 @@ const SUPPORT = [
 ];
 
 const Creators = () => (
-  <ul data-testid="creators-list" className="mt-8 grid gap-3 sm:grid-cols-2">
+  <ul data-testid="creators-list" className="mt-5 grid gap-3 sm:grid-cols-2">
     {CREATORS.map(([a, b], i) => (
       <li key={a} data-testid={`creator-${i + 1}`} className="creator-row">
         <span aria-hidden="true" className="slash-mini mt-2 shrink-0" />
@@ -34,15 +34,15 @@ const Project9 = () => (
   <Reveal>
     <Num n={9} className="text-6xl sm:text-7xl" />
     <h2 data-testid="projects-title" className="mt-3 max-w-4xl font-display text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl">
-      9. Hai un progetto nel mondo anime e manga? Ti aiutiamo a svilupparlo!
+      Hai un progetto nel mondo anime e manga? Ti aiutiamo a svilupparlo!
     </h2>
-    <div className="mt-8 max-w-3xl space-y-4 text-base leading-relaxed text-zinc-700 sm:text-lg">
+    <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-zinc-700 sm:text-lg">
       <p>La Toman Italiana non vuole soltanto riunire appassionati.</p>
       <p className="font-semibold text-ink">Vogliamo anche aiutarti a trasformare le tue passioni, i tuoi talenti e le tue idee in progetti concreti!</p>
-      <p className="pt-4 font-display text-xl font-extrabold text-ink">Che tu sia:</p>
+      <p className="pt-2 font-display text-xl font-extrabold text-ink">Che tu sia:</p>
     </div>
     <Creators />
-    <div className="mt-8 max-w-3xl space-y-4 text-base leading-relaxed text-zinc-700 sm:text-lg">
+    <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-zinc-700 sm:text-lg">
       <p>Oppure abbia qualsiasi altro progetto legato al mondo anime, manga e cosplay.</p>
       <p className="font-semibold text-ink">Nella Toman Italiana puoi trovare una community e una struttura organizzativa con cui sviluppare le tue idee, ottenere visibilità e creare nuove collaborazioni!</p>
     </div>
@@ -50,10 +50,10 @@ const Project9 = () => (
 );
 
 const Project10 = () => (
-  <Reveal className="mt-20 grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+  <Reveal className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
     <div className="lg:sticky lg:top-32 lg:self-start">
       <Num n={10} className="text-6xl sm:text-7xl" />
-      <h3 data-testid="visibility-title" className="mt-3 font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">10. Dai più visibilità ai tuoi progetti!</h3>
+      <h3 data-testid="visibility-title" className="mt-3 font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">Dai più visibilità ai tuoi progetti!</h3>
       <div className="mt-6 space-y-4 text-base leading-relaxed text-zinc-700 sm:text-lg">
         <p>Avere una buona idea è soltanto l'inizio. Per farla crescere servono anche visibilità, persone e opportunità.</p>
         <p className="font-semibold text-ink">Per questo vogliamo sostenere i progetti dei nostri membri attraverso:</p>
@@ -71,15 +71,15 @@ const Project10 = () => (
 );
 
 export const Projects = () => (
-  <section data-testid="projects-section" className="py-20 sm:py-28">
+  <section data-testid="projects-section" className="border-t border-black/10 py-14 sm:py-20">
     <Container>
       <Project9 />
       <Project10 />
-      <Reveal className="mt-20 rounded-2xl border border-black p-7 sm:p-12">
+      <Reveal className="mt-14 rounded-2xl border border-black p-6 sm:p-10">
         <p className="font-display text-3xl font-extrabold tracking-tight sm:text-5xl">E non partiamo da zero!</p>
         <p className="mt-5 max-w-3xl text-lg font-semibold leading-relaxed text-ink">Già decine di content creator, cosplayer, disegnatori e community indipendenti hanno scelto di entrare nella Toman Italiana per sviluppare i propri progetti!</p>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-700 sm:text-lg">E vogliamo continuare ad ampliare queste opportunità, coinvolgendo sempre più persone in tutta Italia.</p>
-        <div className="mt-8"><CtaButton id="progetti" /></div>
+        <div className="mt-7"><CtaButton id="progetti" /></div>
       </Reveal>
     </Container>
   </section>

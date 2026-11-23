@@ -1,21 +1,26 @@
-const WORDS = ["Anime", "Manga", "Cosplay", "Toman Italiana"];
+const PHRASES = [
+  "FAI NUOVE AMICIZIE",
+  "VIVI ESPERIENZE INDIMENTICABILI",
+  "VAI ALLE FIERE IN COMPAGNIA",
+  "REALIZZA I TUOI PROGETTI",
+];
 
-const Row = () => (
-  <div className="marquee-row" aria-hidden="true">
-    {[...WORDS, ...WORDS].map((w, i) => (
-      <span key={i} className="flex items-center gap-8 pr-8">
-        <span className="font-display text-3xl font-extrabold tracking-tight sm:text-5xl">{w}</span>
-        <span className="slash-mini" />
-      </span>
+const Row = ({ hidden }) => (
+  <ul className="marquee-row" aria-hidden={hidden || undefined}>
+    {[...PHRASES, ...PHRASES].map((w, i) => (
+      <li key={i} className="flex items-center gap-7 pr-7 sm:gap-10 sm:pr-10">
+        <span className="whitespace-nowrap font-display text-2xl font-extrabold tracking-tight sm:text-4xl">{w}</span>
+        <span aria-hidden="true" className="slash-mini" />
+      </li>
     ))}
-  </div>
+  </ul>
 );
 
 export const Marquee = () => (
-  <div data-testid="marquee" className="marquee border-y border-black py-5 sm:py-6">
+  <div data-testid="marquee" className="marquee border-y border-black py-4 sm:py-5">
     <div className="marquee-track">
-      <Row />
-      <Row />
+      <Row hidden />
+      <Row hidden />
     </div>
   </div>
 );

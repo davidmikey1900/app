@@ -47,7 +47,7 @@ const Problem = ({ item, n }) => (
       <Num n={n} className="text-6xl sm:text-7xl" />
       <div>
         <h3 className="font-display text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl">
-          {n}. {item.t}
+          {item.t}
         </h3>
         <div className="mt-4 space-y-4 text-base leading-relaxed text-zinc-700 sm:text-lg">
           {item.p.map((x) => <p key={x}>{x}</p>)}
@@ -58,19 +58,19 @@ const Problem = ({ item, n }) => (
 );
 
 export const Problems = () => (
-  <section data-testid="problems-section" className="py-20 sm:py-28">
-    <Container className="grid gap-12 lg:grid-cols-[0.9fr_1.6fr] lg:gap-16">
+  <section data-testid="problems-section" className="py-14 sm:py-20">
+    <Container className="grid gap-8 lg:grid-cols-[0.9fr_1.6fr] lg:gap-16">
       <div className="lg:sticky lg:top-32 lg:self-start">
         <Slash />
-        <h2 data-testid="problems-title" className="mt-6 font-display text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl">
+        <h2 data-testid="problems-title" className="mt-5 font-display text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl">
           Ti riconosci in almeno una di queste situazioni?
         </h2>
       </div>
-      <div className="space-y-6">
+      <div className="space-y-4">
         {PROBLEMS.map((item, i) => (
-          <div key={item.t} className="space-y-6">
+          <div key={item.t} className="space-y-4">
             <Problem item={item} n={i + 1} />
-            {item.cta && <div className="py-4"><CtaButton id={item.cta} /></div>}
+            {item.cta && <div className="py-2"><CtaButton id={item.cta} /></div>}
           </div>
         ))}
       </div>

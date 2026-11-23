@@ -47,7 +47,7 @@ const Card = ({ item, n }) => {
         <Num n={n} className="text-5xl" />
         <span className="icon-chip"><Icon aria-hidden="true" className="h-5 w-5" /></span>
       </div>
-      <h3 className="mt-6 font-display text-2xl font-extrabold leading-tight tracking-tight">{n}. {item.t}</h3>
+      <h3 className="mt-5 font-display text-2xl font-extrabold leading-tight tracking-tight">{item.t}</h3>
       <div className="mt-4 space-y-3 text-base leading-relaxed text-zinc-700">
         {item.p.map((x) => <p key={x}>{x}</p>)}
       </div>
@@ -56,20 +56,20 @@ const Card = ({ item, n }) => {
 };
 
 export const Online = () => (
-  <section data-testid="online-section" className="border-t border-black/10 bg-paper py-20 sm:py-28">
+  <section data-testid="online-section" className="border-t border-black/10 py-14 sm:py-20">
     <Container>
       <Reveal>
         <Slash />
-        <h2 data-testid="online-title" className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-6xl">
+        <h2 data-testid="online-title" className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-6xl">
           Scopri tutto quello che puoi fare online!
         </h2>
       </Reveal>
-      <div className="mt-14 grid gap-5 md:grid-cols-2">
+      <div className="mt-10 grid gap-5 md:grid-cols-2">
         {ITEMS.map((item, i) => (
           <Reveal key={item.t} delay={(i % 2) * 0.08} className="h-full"><Card item={item} n={i + 1} /></Reveal>
         ))}
       </div>
-      <Reveal className="mt-14 flex flex-col gap-8 border-t border-black/10 pt-10 lg:flex-row lg:items-center lg:justify-between">
+      <Reveal className="mt-10 flex flex-col gap-6 border-t border-black/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
         <p className="max-w-xl font-display text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl">
           E tutto questo puoi farlo direttamente da WhatsApp, ovunque ti trovi!
         </p>

@@ -79,14 +79,14 @@ body { background: #fff; color: var(--ink); overflow-x: hidden; }
 .outline-text { color: transparent; -webkit-text-stroke: 1.5px rgba(10,10,10,.85); }
 
 /* Marquee lenta */
-.marquee { overflow: hidden; background: #fff; }
-.marquee-track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
-.marquee-row { display: flex; align-items: center; }
+.marquee { overflow: hidden; background: #fff; max-width: 100%; contain: paint; }
+.marquee-track { display: flex; width: max-content; animation: marquee 80s linear infinite; }
+.marquee-row { display: flex; align-items: center; margin: 0; padding: 0; list-style: none; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } html { scroll-behavior: auto; } }
 
 .problem-panel {
-  display: block; padding: 1.75rem 0; border-top: 1px solid rgba(10,10,10,.12);
+  display: block; padding: 1.4rem 0; border-top: 1px solid rgba(10,10,10,.12);
 }
 
 .ink-section::before {
@@ -99,7 +99,7 @@ body { background: #fff; color: var(--ink); overflow-x: hidden; }
 .ink-section .num { -webkit-text-stroke-color: #fff; }
 
 .lost-row {
-  display: flex; gap: 1.25rem; padding: 1.4rem 0; border-bottom: 1px solid rgba(255,255,255,.2);
+  display: flex; gap: 1.25rem; padding: 1.1rem 0; border-bottom: 1px solid rgba(10,10,10,.12);
   transition: padding-left .35s ease;
 }
 .lost-row:hover { padding-left: .75rem; }
@@ -133,15 +133,21 @@ body { background: #fff; color: var(--ink); overflow-x: hidden; }
 @media (min-width: 640px) { .timeline-item { padding-left: 2rem; } }
 
 .raduni-panel {
-  display: block; background: var(--ink); color: #fff; border-radius: 1.25rem;
-  padding: 2rem 1.5rem; position: relative; overflow: hidden;
+  display: block; background: #fff; color: var(--ink); border: 1px solid var(--ink); border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem; position: relative; overflow: hidden;
 }
-.raduni-panel .num { -webkit-text-stroke-color: #fff; }
 .raduni-panel::after {
   content: ""; position: absolute; right: 2rem; top: 2.2rem; width: 3.5rem; height: .45rem;
   background: var(--brand); transform: skewX(-28deg);
 }
-@media (min-width: 640px) { .raduni-panel { padding: 3.5rem; } }
+@media (min-width: 640px) { .raduni-panel { padding: 3rem; } }
+
+.social-link {
+  display: inline-flex; align-items: center; gap: .5rem; min-height: 2.75rem; padding: .5rem 1rem;
+  border: 1px solid rgba(10,10,10,.15); border-radius: 999px; color: var(--ink); font-size: .95rem;
+  transition: border-color .25s ease, background-color .25s ease;
+}
+.social-link:hover { border-color: var(--ink); background: var(--paper); }
 
 .creator-row {
   display: flex; gap: 1rem; padding: 1.1rem 1.25rem; border: 1px solid rgba(10,10,10,.12);
