@@ -26,7 +26,7 @@ const Item = ({ item, n }) => (
     <div data-testid={`live-item-${n}`}>
       <Num n={n} className="text-5xl sm:text-6xl" />
       <h3 className="mt-3 font-display text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl">{item.t}</h3>
-      <div className="mt-4 space-y-4 text-base leading-relaxed text-zinc-700 sm:text-lg">
+      <div className="mt-4 space-y-3 text-base leading-relaxed text-zinc-700 sm:text-lg">
         {item.p.map((x) => <p key={x}>{x}</p>)}
       </div>
     </div>
@@ -43,17 +43,15 @@ const Raduni = () => (
       <p className="mt-5 max-w-3xl text-lg font-semibold leading-relaxed text-ink">
         Immagina un evento in cui l'obiettivo principale non sia soltanto visitare degli stand, ma conoscere davvero nuove persone!
       </p>
-      <div className="mt-6 grid gap-6 border-t border-black/10 pt-6 text-base leading-relaxed text-zinc-700 md:grid-cols-2 md:gap-10 sm:text-lg">
-        <div className="space-y-4">
-          <p>Nelle fiere tradizionali puoi esplorare gli stand, acquistare prodotti e scattare foto con i cosplayer. Ma non sempre è facile instaurare nuove amicizie.</p>
-          <p>Per questo vogliamo organizzare raduni ufficiali Toman al di fuori delle fiere e dei Comics, anche in collaborazione con locali.</p>
+      <div className="mt-5 grid gap-4 border-t border-black/10 pt-5 text-base leading-relaxed text-zinc-700 md:grid-cols-2 md:gap-10 sm:text-lg">
+        <div>
+          <p>Nelle fiere tradizionali puoi esplorare gli stand e scattare foto con i cosplayer, ma non sempre è facile fare nuove amicizie. Per questo vogliamo organizzare raduni ufficiali Toman al di fuori delle fiere e dei Comics, anche in collaborazione con locali.</p>
         </div>
-        <div className="space-y-4 md:border-l md:border-brand md:pl-10">
-          <p>Eventi con attività pensate appositamente per favorire la socializzazione, rompere il ghiaccio e creare legami con persone della tua città e delle zone vicine.</p>
-          <p>Il tutto in un ambiente organizzato, con regole precise e attenzione alla tutela dei partecipanti.</p>
+        <div className="md:border-l md:border-brand md:pl-10">
+          <p>Eventi con attività pensate per rompere il ghiaccio e creare legami con persone della tua zona, in un ambiente organizzato, con regole precise e attenzione alla tutela dei partecipanti.</p>
         </div>
       </div>
-      <p className="mt-6 font-display text-xl font-extrabold leading-snug text-ink sm:text-2xl">
+      <p className="mt-5 font-display text-xl font-extrabold leading-snug text-ink sm:text-2xl">
         Il nostro obiettivo? Portare questi raduni nelle principali province di ogni regione italiana!
       </p>
     </div>
@@ -61,7 +59,7 @@ const Raduni = () => (
 );
 
 export const Live = () => (
-  <section data-testid="live-section" className="border-t border-black/10 py-14 sm:py-20">
+  <section data-testid="live-section" className="border-t border-black/10 py-12 sm:py-20">
     <Container>
       <Reveal className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         <div>
@@ -70,7 +68,7 @@ export const Live = () => (
             E dal vivo? Le opportunità non mancano!
           </h2>
         </div>
-        <div className="space-y-4 text-base leading-relaxed text-zinc-700 sm:text-lg lg:pt-10">
+        <div className="space-y-3 text-base leading-relaxed text-zinc-700 sm:text-lg lg:pt-10">
           <p className="font-semibold text-ink">Dalle fiere alle uscite settimanali con persone della tua città, fino ai raduni ufficiali Toman!</p>
           <p>Vogliamo creare sempre più occasioni per trasformare le conoscenze online in amicizie vere ed esperienze da vivere insieme.</p>
         </div>

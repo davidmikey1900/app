@@ -49,7 +49,7 @@ const Problem = ({ item, n }) => (
         <h3 className="font-display text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl">
           {item.t}
         </h3>
-        <div className="mt-4 space-y-4 text-base leading-relaxed text-zinc-700 sm:text-lg">
+        <div className="mt-4 space-y-3 text-base leading-relaxed text-zinc-700 sm:text-lg">
           {item.p.map((x) => <p key={x}>{x}</p>)}
         </div>
       </div>
@@ -58,7 +58,7 @@ const Problem = ({ item, n }) => (
 );
 
 export const Problems = () => (
-  <section data-testid="problems-section" className="py-14 sm:py-20">
+  <section data-testid="problems-section" className="py-12 sm:py-20">
     <Container className="grid gap-8 lg:grid-cols-[0.9fr_1.6fr] lg:gap-16">
       <div className="lg:sticky lg:top-32 lg:self-start">
         <Slash />

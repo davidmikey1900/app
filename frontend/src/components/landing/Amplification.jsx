@@ -9,7 +9,7 @@ const LOST = [
 ];
 
 export const Amplification = () => (
-  <section data-testid="amplification-section" className="relative border-t border-black/10 py-14 sm:py-20">
+  <section data-testid="amplification-section" className="relative border-t border-black/10 py-12 sm:py-20">
     <Container className="relative">
       <Reveal>
         <h2 data-testid="amplification-title" className="max-w-4xl font-display text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">

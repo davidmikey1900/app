@@ -1,7 +1,7 @@
 import { Container, Num, Reveal } from "./ui";
 
 export const FreeTime = () => (
-  <section data-testid="freetime-section" className="border-t border-black/10 py-14 sm:py-20">
+  <section data-testid="freetime-section" className="border-t border-black/10 py-12 sm:py-20">
     <Container>
       <Reveal className="grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
         <div>

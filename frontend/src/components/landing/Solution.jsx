@@ -30,7 +30,7 @@ const Stat = ({ value, children, testid }) => (
 );
 
 export const Solution = () => (
-  <section data-testid="solution-section" className="relative border-t border-black/10 py-14 sm:py-24">
+  <section data-testid="solution-section" className="relative border-t border-black/10 py-12 sm:py-24">
     <Container>
       <LogoReveal />
       <Reveal className="mx-auto mt-10 max-w-4xl text-center sm:mt-14">

@@ -30,7 +30,7 @@ const ITEMS = [
   },
   {
     icon: Scissors,
-    t: "Aiuto Cosplay: migliora le tue creazioni!",
+    t: "Hai bisogno di aiuto con il tuo cosplay?",
     p: [
       "Hai difficoltà con parrucche, armature, armi sceniche, make-up o materiali?",
       "Nel nostro gruppo Aiuto Cosplay puoi ricevere consigli concreti su styling delle parrucche, cucito, accessori, trucco e tecniche di realizzazione.",
@@ -47,7 +47,7 @@ const Card = ({ item, n }) => {
         <Num n={n} className="text-5xl" />
         <span className="icon-chip"><Icon aria-hidden="true" className="h-5 w-5" /></span>
       </div>
-      <h3 className="mt-5 font-display text-2xl font-extrabold leading-tight tracking-tight">{item.t}</h3>
+      <h3 className="mt-4 font-display text-2xl font-extrabold leading-tight tracking-tight">{item.t}</h3>
       <div className="mt-4 space-y-3 text-base leading-relaxed text-zinc-700">
         {item.p.map((x) => <p key={x}>{x}</p>)}
       </div>
@@ -56,7 +56,7 @@ const Card = ({ item, n }) => {
 };
 
 export const Online = () => (
-  <section data-testid="online-section" className="border-t border-black/10 py-14 sm:py-20">
+  <section data-testid="online-section" className="border-t border-black/10 py-12 sm:py-20">
     <Container>
       <Reveal>
         <Slash />
